@@ -1,0 +1,85 @@
+//		Use for weird sketchy thingy
+//        checkOffScreenImage();
+//        int x = evt.getX();
+//		int y = evt.getY();
+//		Graphics2D g2 = (Graphics2D)offScreenImage.getGraphics();
+//        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+//		int lastX = linePoints.get(linePoints.size()-1).x;
+//		int lastY = linePoints.get(linePoints.size()-1).y;
+//       for(int i = linePoints.size() -1; Math.hypot(x-lastX, y-lastY) < 20.0 && i > 0; i--){
+//			lastX = linePoints.get(i-1).x;
+//			lastY = linePoints.get(i-1).y;
+//	   }
+//		linePoints.add(new MarkedPoint(x,y));
+//		g2.drawLine(lastX,lastY,x,y);
+//			repaintRect(lastX,lastY,x,y);
+
+
+jhnphm: lalla
+jhnphm: What are you drawing o_O?
+Rim: just testing something
+jhnphm: Ah
+john: lalala
+john: The 1px wide eraser sucks XD
+john: But scrolling, etc works.
+john: Need to optimize zoom next.
+Jamu: Woo scroll thingy works *_*
+john: Yah XD
+Jamu: I was confused for a bit though XD I since the colors are reversed
+john: XDD
+Jamu: Make the bar the darker color and the BG lighter
+john: It's a limitation of the theming though- if I make the bar dark, than the buttons get dark too, and then you can't read text.
+Jamu: D:
+Jamu: You can't change the button color separatey?
+john: Nope, they're linked, unless I go dig up another theming engine.
+Jamu: Also I like how pchat buttons are on a mobile menu
+john: This is the best/smallest one I could fine though.
+john: Mobile?
+john: Didn't you say you hated that ? XDD
+Jamu: You can move it around
+Jamu: No, I don't like it on top of canvas
+john: Ah.
+Jamu: But I like being able tomove it within the margin
+john: Nestor says he uses pro mode XD
+john: Ah
+john: What's the use there o-O?
+john: (being able to move inside margin)
+Jamu: Dunno I just like it XD for personal preference
+Jamu: And also you can move it down if you open another menu like layers or coor
+Jamu: color
+john: Ah
+john: I think I'm gonna tab tool preferences 
+john: Like one tab for tool prefs, one tab for general options (which should be saved), one tab for tool picking.
+
+
+Overwriting newer on top okay w/ undo. To implement undo, probably store layers underneath stroke bounding box before 
+
+Setup tool to change layers
+
+Fix server disconnect nullPointerexceptions
+
+notify w/ liveconnect
+
+notify of enter/exit w/ text
+
+clean protocol for disconnect
+
+persist settings
+
+explicit copy/paste text
+
+Line, erase, airbrush, dithering
+
+Proper applet unload on close
+
+Security. Should be safe, just verify login message, and strip textmessages of seedy chars.
+
+Consider thread to perform scaling,.
+
+Implement garbage collect/compress for tiles.
+
+Perhaps add timestamp to messages
+
+Gaussian dist for gradient
+
+

@@ -1,0 +1,156 @@
+/*
+ * Brush.java
+ *
+ * Created on April 28, 2007, 5:05 PM
+ *
+ * To change this template, choose Tools | Template Manager
+ * and open the template in the editor.
+ */
+package cx.ath.feck.jchat.paint.tools.brush;
+
+import cx.ath.feck.jchat.paint.tools.Tool;
+import cx.ath.feck.jchat.paint.DrawingPrimitives;
+import cx.ath.feck.jchat.paint.Layer;
+import cx.ath.feck.jchat.paint.tools.toolinterfaces.HasAntialiasing;
+import cx.ath.feck.jchat.paint.tools.toolinterfaces.HasColor;
+import cx.ath.feck.jchat.paint.tools.toolinterfaces.HasIncremential;
+import cx.ath.feck.jchat.paint.tools.toolinterfaces.HasThickness;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics2D;
+import java.awt.Point;
+import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
+import java.util.LinkedList;
+
+
+/**
+ *
+ * @author John Pham
+ */
+public class Brush implements Tool, HasColor, HasAntialiasing,HasIncremential, HasThickness {
+	//Variables to implement interface
+	private LinkedList<Point> points;
+    private Rectangle totalBounds;
+    private Rectangle repaintBounds;
+    private BufferedImage img;
+	
+	//Variables for brush
+	private Color color;
+	private int radius;
+	boolean antialiased;
+	private BufferedImage brush;
+	Layer displayLayer;
+	Layer toolLayer;
+	Layer activeLayer;
+	
+    public Brush() {
+        color = Color.BLACK;
+		this.setRadius(0);
+    }
+
+    private Rectangle draw(Point p0, Point p1) {
+		Graphics2D g;
+		Rectangle bounds = DrawingPrimitives.getLineBounds(p0,p1,radius);
+		bounds = bounds.intersection(new Rectangle(activeLayer.getSize()));
+		if(bounds.width <= 0 || bounds.height<= 0){
+			return new Rectangle(0,0,1,1);
+		}
+		//We draw stuff into a temporary buffer for easy compositing later. 
+		//Perhaps later put whole line on temp invisible activeLayer, then merge down for uniformity
+		//TODO: Use manual compositing w/ setPixel();  Or perhaps not.
+		BufferedImage lineBuffer = new BufferedImage(bounds.width,bounds.height,BufferedImage.TYPE_INT_ARGB);
+		g = lineBuffer.createGraphics();
+		Point p0t= new Point(p0.x-bounds.x,p0.y-bounds.y);	//Use these adjusted coordinates to draw into temporary line buffer
+		Point p1t= new Point(p1.x-bounds.x,p1.y-bounds.y);
+		//DrawingPrimitives.drawLine(p0t,p1t,color,lineBuffer);
+		DrawingPrimitives.drawFilledLine(p0t,p1t,color,brush,lineBuffer);
+		g.dispose();//Get rid of graphics object used to draw on linebuffer.
+//		toolLayer.setComposite(AlphaComposite.SrcOut);
+		toolLayer.drawFrom(lineBuffer,bounds.x,bounds.y);
+//		toolLayer.setComposite(AlphaComposite.DstOut);
+//		toolLayer.drawFrom(lineBuffer,bounds.x,bounds.y);
+		//activeLayer.setRGB(p0.x,p0.y,color.getRGB());
+		return bounds;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+		setRadius(radius);
+	}
+
+	public int getRadius() {
+		return radius;
+	}
+
+	public void setRadius(int radius) {
+		this.radius = radius;
+		brush = new BufferedImage(2*radius+1,2*radius+1,BufferedImage.TYPE_INT_ARGB);
+		//DrawingPrimitives.drawFilledCircle(new Point((radius*2+1)/2,(radius*2+1)/2),radius,color,brush);
+		DrawingPrimitives.drawGradientCircle(new Point((radius*2+1)/2,(radius*2+1)/2),radius,color,brush);
+	}
+	
+	
+	/*
+	 * Methods below required to implement interface
+	 */
+    public void start(Point p) {
+		totalBounds = new Rectangle(p, new Dimension(1, 1));
+		points = new LinkedList<Point>();
+		points.add(p);
+		addPoint(p);
+    }
+	
+	public void addPoint(Point p) {
+        //Add to last points
+        Point lastPoint = points.getLast();
+		if(p.equals(lastPoint) && points.size() > 1){
+			return;
+		}
+        points.add(p);  
+        //Draw subline
+        repaintBounds = draw(lastPoint, p);
+		//Add bounds of repaint area to that of stroke
+		totalBounds.add(repaintBounds);
+    }
+
+    public void end(Point p) {
+		if(!p.equals(points.getLast())){	//Do this so we don't draw over same point twice, since screws up alpha
+			addPoint(p);
+		}
+		activeLayer.drawFrom(toolLayer);
+    }
+
+    public Rectangle getRepaintBounds() {
+//		if(repaintBounds == null){
+//			return new Rectangle(1,1);
+//		}
+        //Use intersection to avoid going outside layer
+        return repaintBounds.intersection(new Rectangle(activeLayer.getSize()));
+    }
+
+    public Rectangle getTotalBounds() {
+        //Use intersection to avoid going outside canvas
+        return totalBounds.intersection(new Rectangle(activeLayer.getSize()));
+    }
+	
+    public void setActiveLayer(Layer layer) {
+        this.activeLayer = layer;
+	}
+	
+	public void setToolLayer(Layer layer) {
+        this.toolLayer = layer;
+	}
+	
+	public void setDisplayLayer(Layer layer) {
+        this.displayLayer = layer;
+	}
+	
+	public Object getToolData(){
+		return null;
+	}
+}

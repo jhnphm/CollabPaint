@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/paint/DrawingPrimitives.java</file>
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/paint/tools/toolinterfaces/HasAntialiasing.java</file>
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/paint/tools/toolinterfaces/HasThickness.java</file>
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/paint/tools/toolinterfaces/MaskUtilizer.java</file>
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/shared/ClientData.java</file>
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/shared/ControlMessage.java</file>
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/shared/Math2.java</file>
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/shared/Message.java</file>
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/shared/PaintControlMessage.java</file>
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/shared/PaintDataMessage.java</file>
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/shared/PaintMessage.java</file>
+        <file>file:/home/john/NetBeansProjects/JChat/JChatShared/src/cx/ath/feck/jchat/shared/StatusConsts.java</file>
+    </open-files>
+</project-private>

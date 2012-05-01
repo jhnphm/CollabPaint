@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.0" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <AuxValues>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-40,0,0,2,-27"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="widgetPanel">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[150, 150]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[150, 100]"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+          <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="3" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="5" anchor="10" weightX="0.0" weightY="1.0"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="zoomInButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="+"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="zoomInButtonActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+              <GridBagConstraints gridX="1" gridY="4" gridWidth="1" gridHeight="1" fill="1" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="zoomOutButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="-"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="zoomOutButtonActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+              <GridBagConstraints gridX="0" gridY="4" gridWidth="1" gridHeight="1" fill="1" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="jSeparator1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+              <GridBagConstraints gridX="0" gridY="2" gridWidth="2" gridHeight="1" fill="1" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="whiteButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="White(Erase)"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="whiteButtonActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+              <GridBagConstraints gridX="0" gridY="0" gridWidth="0" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="blackButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Black(Draw)"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="blackButtonActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+              <GridBagConstraints gridX="0" gridY="1" gridWidth="0" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JSlider" name="brushSizeSlider">
+          <Properties>
+            <Property name="maximum" type="int" value="200"/>
+            <Property name="value" type="int" value="2"/>
+          </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="brushSizeSliderStateChanged"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+              <GridBagConstraints gridX="0" gridY="3" gridWidth="0" gridHeight="1" fill="2" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="paintCanvasScrollPane">
+      <Properties>
+        <Property name="wheelScrollingEnabled" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="paintCanvasScrollPaneMousePressed"/>
+        <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="paintCanvasScrollPaneMouseReleased"/>
+        <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="paintCanvasScrollPaneMouseDragged"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.S"›üG½?mÌñs»Í«XúŠÙjE´îÚFAMo¼-ü4¡yëµ€§ŸÞÉ7æeôžNKYN´ŽŽ{ã±&Î)Ã©˜Ž¥† 8õ‰:£ãøwkÿÝðæWX²Ec©x+¯ê;ÙÏ“»¼œ","¯ñôý´3ÅÌzï6­cëXšb—¤È™L¹m‘²…*Ó(äe'ìõ3Ù¦\ÖÕ”ÔJUÏãP·ýño,yñø™ÿ5…lCÙf„y ¸N,o<|ñR«uÌQdÀÃ‡i¨b¨`Ytßh,ëŒRê	AõKDóÕw‘]Ñ×ð¼mQL ²˜}„¨öSÖ˜,ÿû¤ ¤ ÿRÛé‡ClmJÛ}a¨mÏMm§½¹€­´õ¡w·em 
+S.ØçÈäe'÷ªaVð'É£ŒjÿÂþø{œÎ:þ›‡°,<bú8{/ÿÿò¿ÿÓÏL+M–O\¼ÌþÓð5. ”C ’—«ôï ÎŽüyþ©(‹„¨öS€VB VíŒ—6../Æ½²VItkÜCJZ&ýuõšïç‰¹qã|Ókm*PÉö­NckŸýýFïÿïÌa#uÜÙiõoGW´Ñ›ŠÜý®‡ÕòÓ7+gXs‹×<¨‡îœÅÒÉ¥¹oFó÷‚ &ÛZ.Š•Øäeêm´ªè$Öé;ˆm‰¿]ïY®þ~bn\xXÍ6¶Ò¥ `›%ð©•:›\ÿéôËwýùŒ$n»›4}G›ÑiûM·—?Dò«å¦nVÎ°çÿ®yQÝ9‹¥“KrÞçîDR»kmÚÍÔÖ†:­l’§ 00dc     ¶\Òi 01wbB  çXv&˜ûOû/¹¦h«5I¸IOüE˜ÿÏþú¾õï?ìíù{'¿9Ï%<–‡!´ÿuóo—²mô³iH»Óevß_¥Œ_r©ØÀ›ÊíE3t63ÿˆé6Ø‘rÚÛD¶³u5¡Ž«Aš¤ÿû¤ ¯ @X{Zêrèaë]MI]q§ Í¹¥)®4ô·©ÃÆùÖˆœ_iÿe÷4Ã­)cš¤Ü$§þ2Ì¿çÿ}^»{Ïûvü½’oµg’žKCÚºù·ËÙ.úY´¤]é²»o¯Ò‡Æ/¹Tì`Måv¢ˆ™‚º#ñM¶ v@äˆ—ªU>‡ P©ß¨×Ý	\Ò6Ê·±FË&†ûyÚMb¡sxî,vZÖÒk]-R–CuÖ«©p+b÷þÛè â—„èŠmÅÑ¥Ý þù,’Š÷-L<æ‘ü{ÿÿÏvÍ£UæUèK—CütGå
+D`+Y.2ö'n£P²ñÞ¸`&ykêxj[Ù/gž‹y¾«OY¨þ¿:oÖ+áU°Œ/]-T–CEuªê\¬/í¾‚)xNˆ«G>kßßÿjQA>ã©‡œÒ?ÿùîÙ¡Ôj¼Ê½érè]ÿùZ%~‘¢S:XÏ4€nÄ¥véà½¡FºØØJ¯ oÿIìoI!ü•bdè6]\ùƒÜš™ÿêJéLóÿÕ°ÜãË¸bÄ¢\ƒz¿¯˜¥9ÕØ}AÒ×ÿÿ\¼7µªq¢XÞjäÍ×¥€Z{ë")±q?ÐÎÀ8Ä‰ÿû¤ ±€¯PWyìCjtJ
+ïaèmLÑI]§¥©¿©+´ô¡µá½¸1p
+5È±°•]ÀÿIì~Š!ü•A1Y#ÑuÈÃäš™ëš©(k™E<ÿÅ[ÁÎ:,|1bQ.A½^Õó¡ó©åPpÖ¹ºþ»™©—†àùkS8È2Ä¼$ÕÉ› ±¥Xb §0Ü¢>JåW:Qè^¯[ §)w*5Q˜ÜÓJn‚d½ÓQUk1Z}m*‡¡ÒcW¨ñ"¡ÎŸèBÙÞÎ†!ÅKR/–´hÂ9ãÑÿÿúS™ùî®4ÁYò$*µå7êë%6çÊæ#éü±òÇr’,H00dc~    ¶^ÒÜ_}ÕÞöû»®û¶û¢Ý÷mÒ}íÝÑ5½Ý¤ï
+Ï>ûï¾ûï¾ûïÝÞ¯¾êû»ï¾é;Qvñ{û¤û»¤ówu}÷ß}÷ÞËMö·½>û­ÕÕ÷;«Û´öäO7Ý7§Iû¶ý÷wÞÞÚáØÖH3}Õ÷Méûï¾ûÕ÷ié÷ßy9Ý÷IíÝíé÷Ý_roO»o­œk<é¾îûíçŸo{ï¾ûÓîÓ«ïº'›»ï»½;·n~û wu¼)ÁSîMéÒ}ÝÕ÷wß}÷ß}í÷WÞß{z~êôû«»î›«ã÷1tøº8¾[«ÐH}½BÁCîÓÛÓ¦ûï¾ûïºo¾ôûï¾ûÓûîÛØý÷ÞŸuY0.«›ô´IZÃLÃc÷µë/}†Þûîîî›¤Þ÷ÖÎ;o¾ûï¾ûÛïcÕî÷DéMï»NmÝÝ÷Òïñ‹AdÃaÈR
+æI%]´ô<=M<&FˆJôûYÕZ­‡&J)Y:Ûßw}ÝÏ}÷Ý“ï¾ûï¾í¾ôí:w·míÚuuzz}k{íoçú¢ÛÊ’	õ?EÍ7Fé±ƒ–M	Òé´Ñ6';mh@pò<rË©†ˆúNûîîIûÓï¾ûï¾ûï¾ôûïWWw§ÞØÏ­½÷ß}½ëï:Ï;‹®}÷ÛÛb·}÷·ß}÷Ý'ß{{iÞûïN¯¾ûÛ´é;»Ooº½¾í»B®Tyò×÷ßkÐv
+ÛÊW'k£Þ˜ÞûïºNÚëºNôôûï¾û«ï¾ûÍÕñ{Ÿ[)h#[¡äe¡ž°PhØè„XX}Õmëp-ObŒù²&ë#6Q–	ÇOt—ß}òú©ºn›¶îûÝ÷ß}÷ßZžûï¾ôöôû´öôöU÷o}­¾fD[¾fbF‰ŸtßvÝB…Ðrç,`hç’iü+O™ÀÀ«XNÏV3êÔMP0¤ø9€õÄ™,
+‹ßÝß}í÷ÞžŸ}÷¦·>ûìg–Þûïo¾/sÛÓÑw^Þ”>0¯R
+‰·J:QYÃmôÂëî’Ø}ƒxq‚¡ùô˜Ù¤{4HÐ³Ô­†	ÊƒCï¯”!…õ9<£GÝ“ÓïNÓ«ÍÛ}÷ÞŸ}÷Ý7ÞÞŸ}öëÚ»Òiõú¢`*}ö<ëSY 5÷Ý±F÷¡o*dTûíkô‰œpm;Dt×1°AH5uzz¯7Þêò}÷iÕ÷·ßk{¦ôû¦-7»nïLçQ&—ÖÜ…Ò©¦K`hÞ‚º}÷n·†Ÿ}êßS§ƒ`ß š÷>ûÍÙD÷“»ï¾öûÓïo¾öûîh]=÷u¶X!kG1 Åm0°¡ X)£L!¸d*Ñ¦}÷ß[8Æõó…‹œç¿tŸy¹]ß}Ñ­o}÷ßtšW¾ûïMî}÷Þ›Î­¼œ>Ç—£Z¹IA‡©°ŒåIÈß}Û}÷ÕÛÂ)

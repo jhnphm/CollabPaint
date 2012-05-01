@@ -1,0 +1,19 @@
+themeName                            = Original
+desktopColor                         = 234, 216, 164
+windowBackgroundColor                = 247,242,225
+inactiveWindowBorderColor            = 184,175,119
+normalBorderColor                    = 34, 57, 73
+disabledBorderColor                  = 134, 144, 150
+defaultButtonBorderColor             = 170,59,34
+normalControlBackgroundColor         = 219,196,99
+selectedControlBackgroundColor       = 211, 211, 42
+selectedControlBackgroundShadowColor = 163,159,28
+progressBarBackgroundColor           = 245,246,220
+pressedScrollBarTrackBackgroundColor = 237,225,185
+textInputBackgroundColor             = 255,255,255
+textColor                            = 0,0,0
+# Windowblinds specific colors
+windowblinds.taskPaneContent         = 230,212,158
+windowblinds.taskPaneTitleBar        = 247,219,153
+windowblinds.specialTaskPaneContent  = 206,231,159
+windowblinds.specialTaskPaneTitleBar = 200,228,14

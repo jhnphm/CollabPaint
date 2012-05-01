@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment/>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-2">java.util.concurrent.locks.LockSupport,park,(Ljava/lang/Object;)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-1">sun.java2d.pipe.DrawImage,renderImageXform,(Lsun/java2d/SunGraphics2D;Ljava/awt/Image;Ljava/awt/geom/AffineTransform;IIIIILjava/awt/Color;)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-0">cx.ath.feck.jchat.client.gui.PaintCanvas,paintComponent,(Ljava/awt/Graphics;)V</entry>
+<entry key="presets.cpufragment.profiler.settings.fragment.selection"/>
+<entry key="presets.cpupart.profiler.settings.instrumentation.root.methods.size">3</entry>
+</properties>
